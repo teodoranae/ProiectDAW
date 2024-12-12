@@ -28,7 +28,6 @@ body {
 .navbar {
     background-color: #005fa3 !important;
     border: none !important;
-    /*box-shadow: 0 3px 12px #004a82 !important;*/
 }
 
 a.nav-link {
@@ -69,7 +68,7 @@ a.nav-link:hover {
 }
 
 .features-grid {
-    display: block; /* Schimbăm din Flexbox într-un layout pe verticală */
+    display: block; 
     margin-top: 20px;
 }
 
@@ -80,9 +79,9 @@ a.nav-link:hover {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     opacity: 0;
-    transform: translateY(50px); /* Plasăm elementul sub ecran pentru animație */
-    transition: opacity 1s ease, transform 1s ease, scale 0.3s ease; /* Animații pentru opacitate, transformare și scale */
-    margin-bottom: 20px; /* Distanță între fiecare div */
+    transform: translateY(50px); 
+    transition: opacity 1s ease, transform 1s ease, scale 0.3s ease; 
+    margin-bottom: 20px; 
     min-height: 200px;
     display: flex;
     flex-direction: column;
@@ -90,16 +89,16 @@ a.nav-link:hover {
     text-align: center;
 }
 
-    /* Când elementele devin vizibile */
+
     .feature-item.visible {
         opacity: 1;
-        transform: translateY(0); /* Muta elementul la poziția sa finală */
+        transform: translateY(0); 
     }
 
-    /* Efect de mărire la hover */
+   
     .feature-item:hover {
-        transform: scale(1.05); /* Mărește ușor elementul */
-        transition: transform 0.3s ease; /* Animație pentru hover */
+        transform: scale(1.05); 
+        transition: transform 0.3s ease; 
     }
 
 .cta {
@@ -133,43 +132,42 @@ a.nav-link:hover {
 
 
 .btn.alert-success {
-    background-color: #005fa3; /* Albastru închis */
-    color: white; /* Text alb */
-    border: 1px solid #004a82; /* Albastru mai închis */
-    border-radius: 4px; /* Colțuri rotunjite */
-    padding: 10px 20px; /* Spațiere */
-    font-size: 16px; /* Dimensiunea textului */
-    cursor: pointer; /* Cursor de mână la hover */
+    background-color: #005fa3; 
+    color: white;
+    border: 1px solid #004a82; 
+    border-radius: 4px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn.alert-success:hover {
-        background-color: #0077cc; /* Albastru mai deschis la hover */
-        transform: scale(1.05); /* Efect de mărire la hover */
-        border-color: #005fa3; /* Schimbare ușoară la hover */
+        background-color: #0077cc; 
+        transform: scale(1.05); 
+        border-color: #005fa3; 
 }
 
 .btn.btn-success {
-    background-color: #005fa3; /* Albastru închis */
-    color: white; /* Text alb */
-    border: 1px solid #004a82; /* Albastru mai închis */
-    border-radius: 4px; /* Colțuri rotunjite */
-    padding: 10px 20px; /* Spațiere */
-    font-size: 16px; /* Dimensiunea textului */
-    cursor: pointer; /* Cursor de mână la hover */
+    background-color: #005fa3; 
+    color: white; 
+    border: 1px solid #004a82; 
+    border-radius: 4px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .btn.btn-success:hover {
-        background-color: #0077cc; /* Albastru mai deschis la hover */
-        transform: scale(1.05); /* Efect de mărire la hover */
-        border-color: #005fa3; /* Schimbare ușoară la hover */
+        background-color: #0077cc; 
+        transform: scale(1.05); 
+        border-color: #005fa3;
 }
 
 
-/* Stiluri generale */
 .discord-style .sidebar {
     position: fixed;
-    top: 60px; /* Înălțimea barei de navigare */
+    top: 60px; 
     left: 0;
     width: 250px;
     height: calc(100% - 60px);
@@ -217,7 +215,7 @@ a.nav-link:hover {
                 background-color: #5b6eae;
             }
 
-    /* Canale clickabile */
+    /*clickabile channels*/
     .discord-style .sidebar .channel-item {
         margin-bottom: 10px;
     }
@@ -228,7 +226,7 @@ a.nav-link:hover {
             text-decoration: none;
             padding: 10px;
             border-radius: 5px;
-            background-color: #2c2f33; /* Fundal similar cu sidebar-ul */
+            background-color: #2c2f33;
             transition: background-color 0.2s ease, color 0.2s ease;
         }
 
@@ -270,18 +268,18 @@ a.nav-link:hover {
                     color: white;
                 }
 
-/* Stiluri responsive */
+/*  responsive */
 @media (max-width: 768px) {
     .discord-style .sidebar {
-        transform: translateX(-100%); /* Ascunde sidebar-ul */
+        transform: translateX(-100%); 
     }
 
     .discord-style .content {
-        margin-left: 0; /* Eliminăm spațiul pentru sidebar */
-        padding-top: 60px; /* Adaptează padding-ul la bara de navigare */
+        margin-left: 0; 
+        padding-top: 60px; 
     }
 
-    /* Buton pentru afișarea sidebar-ului */
+    /* buton pentru afisarea sidebar-ului */
     .discord-style .sidebar-toggle {
         position: fixed;
         top: 10px;
@@ -296,16 +294,15 @@ a.nav-link:hover {
     }
 
     .discord-style .sidebar.open {
-        transform: translateX(0); /* Afișează sidebar-ul */
+        transform: translateX(0); /* afisare sidebar-ul */
     }
 
-    /* Paginarea devine stivuită pe ecrane mici */
     .discord-style .sidebar .pagination-nav .pagination {
         flex-direction: column;
     }
 
     .discord-style .sidebar .search-bar input {
-        width: 100%; /* Se adaptează lățimea */
+        width: 100%; 
     }
 }
 
