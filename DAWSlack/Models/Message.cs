@@ -16,6 +16,6 @@ namespace DAWSlack.Models
         public virtual ApplicationUser? User { get; set; }  
         public int? ChannelId { get; set; }
 
-        public virtual Channel? Channel { get; set; }
+        public virtual ChatChannel? Channel { get; set; }
     }
 }

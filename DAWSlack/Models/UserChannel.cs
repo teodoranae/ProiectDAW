@@ -13,6 +13,6 @@ namespace DAWSlack.Models
 
         [Required]
         public int ChannelId { get; set; }
-        public virtual Channel Channel { get; set; }
+        public virtual ChatChannel Channel { get; set; }
     }
 }
