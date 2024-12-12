@@ -10,6 +10,7 @@ namespace DAWSlack.Models
         public string ChannelRoleName { get; set; }
         public string ChannelRoleDescription { get; set; }
 
-        public virtual Channel Channel { get; set; }
+        public virtual ChatChannel Channel { get; set; }
+
     }
 }

@@ -49,11 +49,12 @@ namespace DAWSlack.Controllers
             {
                 db.Categories.Add(cat);
                 db.SaveChanges();
+                TempData["message"] = "Categoria a fost adaugata";
                 return RedirectToAction("Index");
             }
             catch (Exception e)
             {
-                return View();
+                return View(cat);
             }
         }
 

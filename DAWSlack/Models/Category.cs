@@ -12,6 +12,6 @@ namespace DAWSlack.Models
 
         public string CategoryDescription { get; set; }
 
-        public virtual ICollection<Channel> Channels { get; set; }
+        public virtual ICollection<ChatChannel>? Channels { get; set; }
     }
 }

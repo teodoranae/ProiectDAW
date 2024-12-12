@@ -11,7 +11,7 @@ namespace DAWSlack.Data
             : base(options)
         {
         }
-        public DbSet<Channel> Channels { get; set; }
+        public DbSet<ChatChannel> Channels { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ChannelRole> ChannelRoles { get; set; }
         public DbSet<Message> Messages { get; set; }
