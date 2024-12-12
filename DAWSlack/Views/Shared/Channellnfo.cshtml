@@ -1,0 +1,134 @@
+﻿@model DAWSlack.Models.ChatChannel
+
+<div class="card-body">
+    @if (Model != null)
+    {
+        <h3 class="card-title alert-success py-3 px-3 rounded-2">
+            @(Model.ChannelName)
+        </h3>
+
+        <div class="card-text">
+            @Html.Raw(Model.ChannelDescription ?? "No Description Available")
+        </div>
+
+        <div class="d-flex justify-content-between flex-row mt-5">
+            <div>
+                <i class="bi bi-globe"></i>
+                @(Model.Category?.CategoryName ?? "No Category")
+            </div>
+            <div>
+                <i class="bi bi-person"></i>
+                @(Model.User?.UserName ?? "No User")
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger">
+            Channel information is missing.
+        </div>
+    }
+</div>
+
+
+<div class="container" id="contentAfisare">
+
+    @foreach (var message in ViewBag.Messages)
+    {
+        <p>@message.Content</p>
+        <br />
+        <hr />
+        <br />
+    }
+
+</div>
+
+@* Afisarea formularului in care se poate adauga un comentariu *@
+
+@*
+@foreach (var comm in Model.Messages)
+{
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+
+                <div>
+
+                    <p>@comm.Content</p>
+                    <small>@comm.Date</small>
+                    <strong><i class="bi bi-person"> @comm.User.UserName</i></strong>
+
+                </div>
+                <br>
+
+                @if (comm.UserId == ViewBag.UserCurent || ViewBag.EsteAdmin == true)
+                {
+                    <div class="d-flex">
+                        <div>
+                            <a class="btn btn-outline-primary" asp-controller="Comments" asp-action="Edit" asp-route-id="@comm.Id">
+                                <i class="bi bi-pencil-square"></i> Editeaza
+                            </a>
+
+                        </div>
+                        <div>
+                            <form method="post" asp-controller="Comments" asp-action="Delete" asp-route-id="@comm.Id">
+
+                                <button class="btn btn-outline-danger" type="submit"><i class="bi bi-trash"></i>Sterge</button>
+
+                            </form>
+                        </div>
+                    </div>
+                }
+
+                <br />
+            </div>
+
+            <div class="col-md-2"></div>
+
+        </div>
+
+    </div>
+}
+*@
+
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-2"></div>
+
+        <div class="col-md-8">
+
+            <div class="card">
+
+                <form method="post" asp-controller="ChatChannels" asp-action="Show">
+
+                    <div class="card-body">
+
+                        <input type="hidden" name="ChannelId" value="@Model.Id" />
+
+                        <label>Continut Mesaj</label>
+                        <br />
+
+                        <textarea class="form-control" name="Content"></textarea>
+
+                        <span asp-validation-for="ChannelDescription" class="text-danger"></span>
+                        <br /><br />
+
+                        <button class="btn btn-success" type="submit">Adauga Mesaj</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-2"></div>
+
+    </div>
+</div>
+
