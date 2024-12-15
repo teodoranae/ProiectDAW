@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap5")]
 [assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("aspnet-DAWSlack-f06812a4-3628-44d7-8f00-e1173476b092")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAWSlack")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d786089290822c977c128ed8b95f9f2b5317fda4")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAWSlack")]

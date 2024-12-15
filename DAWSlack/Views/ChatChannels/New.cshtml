@@ -1,87 +1,50 @@
-﻿@*
-@{
-    ViewBag.Title = "Adaugare canal";
-}
-*@
 @model DAWSlack.Models.ChatChannel
 
 
+<h2 class="text-center mt-5">Creeaza un canal</h2>
 
-
-<h2>Adaugare Channel</h2>
-
-@*<form method="post" action="/Channels/New">
-
-    <label>Nume Channel</label>
-    <br />
-    <input type="text" name="ChannelName" />
-    <br /><br />
-    <label>Descriere</label>
-    <br />
-    <input type="text" name="ChannelDescription" />
-    <br /><br />
-    <br />
-    <input type="text" name="ChannelDescription" />
-    <br /><br />
-    <br />
-    <input type="text" name="ChannelDescription" />
-    <br /><br />
-    <br />
-    <input type="text" name="ChannelDescription" />
-    <br /><br />
-
-    <button class="btn btn-success" type="submit">Adauga canal</button>
-</form>*@
-
-
+<br />
 
 <div class="container mt-5">
     <div class="row">
         <div class="col-6 offset-3">
 
             <form method="post" asp-action="New" asp-controller="ChatChannels">
-
                 <div asp-validation-summary="All" class="text-danger"></div>
-
                 <div class="form-group">
-                    <label asp-for="ChannelName" class="form-label">Nume Channel</label>
+                    <label asp-for="ChannelName" class="form-label">Numele canalului</label>
                     <br />
                     <input asp-for="ChannelName" class="form-control" />
-
-                    <!-- Mesaj de validare pentru titlu -->
                     <span asp-validation-for="ChannelName" class="text-danger"></span>
+
 
                     <br /><br />
                 </div>
 
                 <div class="form-group">
-                    <label asp-for="ChannelDescription" class="form-label">Descriere</label>
+                    <label asp-for="ChannelDescription" class="form-label">Descrierea canalului</label>
                     <br />
-                    <textarea asp-for="ChannelDescription" class="form-control summernote"></textarea>
-
-                    <!-- Mesaj de validare pentru continut -->
+                    <textarea asp-for="ChannelDescription" class="form-control"></textarea>
                     <span asp-validation-for="ChannelDescription" class="text-danger"></span>
 
                     <br /><br />
                 </div>
-                
+
                 <div class="form-group">
                     <label for="CategoryId">Selectati categoria</label>
                     <br />
                     <select asp-for="CategoryId" asp-items="Model.Categ" class="form-control">
                         <option value="">Selectati categoria</option>
                     </select>
-
-                    <!-- Mesaj de validare pentru CategoryId -->
+                    <br />
                     <span asp-validation-for="CategoryId" class="text-danger"></span>
 
-                    <br />
                 </div>
-                
-                <br />
-                <button class="btn btn-success" type="submit">Adauga articol</button>
+
+                <button class="btn btn-success" type="submit">Creeaza canalul</button>
 
             </form>
         </div>
     </div>
+
 </div>

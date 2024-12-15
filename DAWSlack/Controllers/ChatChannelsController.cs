@@ -78,7 +78,7 @@ namespace DAWSlack.Controllers
             return selectList;
         }
 
-        [Authorize(Roles = "Editor,Admin")]
+        [Authorize(Roles = "User, Editor,Admin")]
         public ActionResult New()
         {
             ChatChannel channel = new ChatChannel();
@@ -89,7 +89,7 @@ namespace DAWSlack.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Editor,Admin")]
+        [Authorize(Roles = "User, Editor,Admin")]
         public IActionResult New(ChatChannel channel)
         {
             if (ModelState.IsValid)
@@ -97,10 +97,10 @@ namespace DAWSlack.Controllers
 
                 db.Channels.Add(channel);
                 db.SaveChanges();
-                TempData["message"] = "Articolul a fost adaugat";
+                TempData["message"] = "Canalul a fost creat";
                 TempData["messageType"] = "alert-success";
                 return RedirectToAction("Index");
-                //return View();
+                return View();
             }
             else
             {

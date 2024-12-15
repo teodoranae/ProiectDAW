@@ -18,7 +18,7 @@ namespace DAWSlack.Models
         public string? UserId { get; set; }
         public virtual ApplicationUser? User { get; set; }
         public virtual Category? Category { get; set; }
-        // cheie externa (FK) - un articol are asociata o categorie
+        // cheie externa (FK) - un canal are asociata una sau mai multe categorii
         public int? CategoryId { get; set; }
         public virtual ICollection<ChannelRole>? ChannelRoles { get; set; }
         public virtual ICollection<UserChannel>? UserChannels { get; set; }
