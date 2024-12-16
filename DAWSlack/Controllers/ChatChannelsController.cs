@@ -78,7 +78,7 @@ namespace DAWSlack.Controllers
             return selectList;
         }
 
-        [Authorize(Roles = "User, Editor,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New()
         {
             ChatChannel channel = new ChatChannel();
@@ -89,7 +89,7 @@ namespace DAWSlack.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "User, Editor,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult New(ChatChannel channel)
         {
             if (ModelState.IsValid)
@@ -124,7 +124,7 @@ namespace DAWSlack.Controllers
         //    }
         //}
 
-                [Authorize(Roles = "User,Editor,Admin")]
+                [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Index()
         {
             var channels = db.Channels.OrderByDescending(a => a.ChannelName);
@@ -225,7 +225,7 @@ namespace DAWSlack.Controllers
         // In plus sunt preluate si toate comentariile asociate unui articol
         // Se afiseaza si userul care a postat articolul respectiv
         // [HttpGet] se executa implicit implicit
-        [Authorize(Roles = "User,Editor,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Show(int id)
         {
             ChatChannel channel = db.Channels
@@ -248,7 +248,7 @@ namespace DAWSlack.Controllers
         {
             ViewBag.AfisareButoane = false;
 
-            if (User.IsInRole("Editor"))
+            if (User.IsInRole("Moderator"))
             {
                 ViewBag.AfisareButoane = true;
             }

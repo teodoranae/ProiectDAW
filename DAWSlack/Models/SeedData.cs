@@ -32,8 +32,8 @@ namespace DAWSlack.Models
                 new IdentityRole
                 {
                     Id = "b06c5910-4b67-4d62-9a89-d92a0e875591",
-                    Name = "Editor",
-                    NormalizedName = "Editor".ToUpper()
+                    Name = "Moderator",
+                    NormalizedName = "Moderator".ToUpper()
                 },
 
 
@@ -69,12 +69,12 @@ namespace DAWSlack.Models
 
                     Id = "b129ac90-dcde-499d-83a5-db6b00e63834",
 
-                    UserName = "editor@test.com",
+                    UserName = "moderator@test.com",
                     EmailConfirmed = true,
-                    NormalizedEmail = "EDITOR@TEST.COM",
-                    Email = "editor@test.com",
-                    NormalizedUserName = "EDITOR@TEST.COM",
-                    PasswordHash = hasher.HashPassword(null, "Editor1!")
+                    NormalizedEmail = "MODERATOR@TEST.COM",
+                    Email = "moderator@test.com",
+                    NormalizedUserName = "MODERATOR@TEST.COM",
+                    PasswordHash = hasher.HashPassword(null, "Moderator1!")
                 },
                 new ApplicationUser
 

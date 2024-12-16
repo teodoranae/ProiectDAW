@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DAWSlack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d786089290822c977c128ed8b95f9f2b5317fda4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01ba16d7aa8ef03ef1865f92a4d92f7761b241ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("DAWSlack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DAWSlack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
