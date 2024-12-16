@@ -15,6 +15,11 @@ namespace DAWSlack.Controllers
 
         public IActionResult Index()
         {
+
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "ChatChannels");
+            }
             return View();
         }
 
