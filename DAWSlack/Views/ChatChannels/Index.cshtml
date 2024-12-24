@@ -1,6 +1,7 @@
 ﻿@{
     ViewBag.Title = "Lista Canale";
 }
+@model DAWSlack.Models.ChatChannel
 
 <div class="discord-style">
     <div class="sidebar">
@@ -14,8 +15,9 @@
 
         @foreach (var channel in ViewBag.Channels)
         {
-            <div class="channel-item">
-                <a href="/ChatChannels/Show/@channel.Id">@channel.ChannelName</a>
+            <div class="channel-item" data-id="@channel.Id">
+                <a href="javascript:void(0);">@channel.ChannelName</a>
+
             </div>
         }
 
@@ -39,9 +41,36 @@
                 </li>
             </ul>
         </div>
+
+        <a class="btn btn-success" asp-area="" asp-controller="ChatChannels" asp-action="New">Add Channel</a>
     </div>
 
-    <div class="content">
-        <!-- Conținutul principal al paginii -->
+    <!-- Container pentru conținutul canalului -->
+    <div class="content" id="content-container">
+        <h3>Conținutul Canalului</h3>
+        <p>Selectează un canal din listă pentru a vedea conținutul.</p>
     </div>
 </div>
+
+@*
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".channel-item").on("click", function () {
+            var channelId = $(this).data("id");
+            if()
+            $.ajax({
+                url: '/ChatChannels/Show/' + channelId,
+                type: 'GET',
+                success: function (response) {
+                    // Înlocuiește doar conținutul containerului
+                    $("#content-container").html(response);
+                },
+                error: function () {
+                    $("#content-container").html("<h3>Eroare</h3><p>Nu s-a putut încărca conținutul canalului.</p>");
+                }
+            });
+        });
+    });
+
+</script>*@
