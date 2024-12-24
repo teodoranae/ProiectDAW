@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using System.Threading.Channels;
 
 namespace DAWSlack.Controllers
 {
@@ -228,22 +230,93 @@ namespace DAWSlack.Controllers
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Show(int id)
         {
-            ChatChannel channel = db.Channels
-                              .Where(art => art.Id == id)
-                              .First();
+            ChatChannel channel = db.Channels.Include("Category").Include("User")
+                                  .Where(ch => ch.Id == id)
+                                  .FirstOrDefault();
 
-            // Adaugam bookmark-urile utilizatorului pentru dropdown
+            var messages = from message in db.Messages
+                           where message.ChannelId == channel.Id
+                           orderby message.Date
+                           select message;
+            ViewBag.Messages = messages;
+
 
             SetAccessRights();
 
             if (TempData.ContainsKey("message"))
             {
                 ViewBag.Message = TempData["message"];
+            }
+
+            if (TempData.ContainsKey("messageType"))
+            {
                 ViewBag.Alert = TempData["messageType"];
             }
 
-            return View(channel);
+            //return View(channel);
+            return PartialView("Channellnfo", channel);
         }
+        [HttpPost]
+        [Authorize(Roles = "User,Editor,Admin")]
+        public IActionResult Show([FromForm] Message message)
+        {
+            message.Date = DateTime.Now;
+
+            // preluam Id-ul utilizatorului care posteaza comentariul
+            message.UserId = _userManager.GetUserId(User);
+            if (!ModelState.IsValid)
+            {
+                foreach (var modelState in ModelState.Values)
+                {
+                    foreach (var error in modelState.Errors)
+                    {
+                        Console.WriteLine(error.ErrorMessage); // Log or debug this line
+                    }
+                }
+            } 
+
+            if (ModelState.IsValid)
+            {
+                message.Type = "1";
+                db.Messages.Add(message);
+                db.SaveChanges();
+
+                ChatChannel channel = db.Channels.Include("Category")
+                                         .Where(channel => channel.Id == message.ChannelId)
+                                         .First();
+
+
+                //
+                //return Redirect("/ChatChannels/Show/"+message.ChannelId.ToString());
+                var messages = from mess in db.Messages
+                               where mess.ChannelId == channel.Id
+                               orderby mess.Date
+                               select mess;
+                ViewBag.Messages = messages;
+                var channels = db.Channels.OrderByDescending(a => a.ChannelName);
+                ViewBag.Channels = channels;
+                //return PartialView("Channellnfo", channel);
+                return View("Index");
+            }
+            else
+            {
+                var channel = db.Channels.Find(message.ChannelId); // Ex
+
+                SetAccessRights();
+
+                var messages = from mess in db.Messages
+                               where mess.ChannelId == channel.Id
+                               orderby mess.Date
+                               select mess;
+                ViewBag.Messages = messages;
+                var channels = db.Channels.OrderByDescending(a => a.ChannelName);
+                ViewBag.Channels = channels;
+                ViewBag.NewID = channel.Id;
+                return View("Index");
+            }
+        }
+
+
         private void SetAccessRights()
         {
             ViewBag.AfisareButoane = false;
