@@ -108,37 +108,6 @@ namespace DAWSlack.Data.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("DAWSlack.Models.Channel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ChannelDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ChannelName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CategoryId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("Channels");
-                });
-
             modelBuilder.Entity("DAWSlack.Models.ChannelRole", b =>
                 {
                     b.Property<int>("Id")
@@ -163,6 +132,39 @@ namespace DAWSlack.Data.Migrations
                     b.HasIndex("ChannelId");
 
                     b.ToTable("ChannelRoles");
+                });
+
+            modelBuilder.Entity("DAWSlack.Models.ChatChannel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ChannelDescription")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<string>("ChannelName")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Channels");
                 });
 
             modelBuilder.Entity("DAWSlack.Models.Message", b =>
@@ -360,13 +362,22 @@ namespace DAWSlack.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("DAWSlack.Models.Channel", b =>
+            modelBuilder.Entity("DAWSlack.Models.ChannelRole", b =>
+                {
+                    b.HasOne("DAWSlack.Models.ChatChannel", "Channel")
+                        .WithMany("ChannelRoles")
+                        .HasForeignKey("ChannelId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Channel");
+                });
+
+            modelBuilder.Entity("DAWSlack.Models.ChatChannel", b =>
                 {
                     b.HasOne("DAWSlack.Models.Category", "Category")
                         .WithMany("Channels")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.HasOne("DAWSlack.Models.ApplicationUser", "User")
                         .WithMany()
@@ -377,20 +388,9 @@ namespace DAWSlack.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("DAWSlack.Models.ChannelRole", b =>
-                {
-                    b.HasOne("DAWSlack.Models.Channel", "Channel")
-                        .WithMany("ChannelRoles")
-                        .HasForeignKey("ChannelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Channel");
-                });
-
             modelBuilder.Entity("DAWSlack.Models.Message", b =>
                 {
-                    b.HasOne("DAWSlack.Models.Channel", "Channel")
+                    b.HasOne("DAWSlack.Models.ChatChannel", "Channel")
                         .WithMany()
                         .HasForeignKey("ChannelId");
 
@@ -405,7 +405,7 @@ namespace DAWSlack.Data.Migrations
 
             modelBuilder.Entity("DAWSlack.Models.UserChannel", b =>
                 {
-                    b.HasOne("DAWSlack.Models.Channel", "Channel")
+                    b.HasOne("DAWSlack.Models.ChatChannel", "Channel")
                         .WithMany("UserChannels")
                         .HasForeignKey("ChannelId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -485,7 +485,7 @@ namespace DAWSlack.Data.Migrations
                     b.Navigation("Channels");
                 });
 
-            modelBuilder.Entity("DAWSlack.Models.Channel", b =>
+            modelBuilder.Entity("DAWSlack.Models.ChatChannel", b =>
                 {
                     b.Navigation("ChannelRoles");
 

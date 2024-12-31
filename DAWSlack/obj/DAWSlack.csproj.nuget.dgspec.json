@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\ProiectDAW\\DAWSlack\\DAWSlack.csproj": {}
+    "C:\\Users\\Teodora\\Source\\Repos\\teodoranae\\ProiectDAW\\DAWSlack\\DAWSlack.csproj": {}
   },
   "projects": {
-    "D:\\Github\\ProiectDAW\\DAWSlack\\DAWSlack.csproj": {
+    "C:\\Users\\Teodora\\Source\\Repos\\teodoranae\\ProiectDAW\\DAWSlack\\DAWSlack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\ProiectDAW\\DAWSlack\\DAWSlack.csproj",
+        "projectUniqueName": "C:\\Users\\Teodora\\Source\\Repos\\teodoranae\\ProiectDAW\\DAWSlack\\DAWSlack.csproj",
         "projectName": "DAWSlack",
-        "projectPath": "D:\\Github\\ProiectDAW\\DAWSlack\\DAWSlack.csproj",
-        "packagesPath": "C:\\Users\\Stankovic\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\ProiectDAW\\DAWSlack\\obj\\",
+        "projectPath": "C:\\Users\\Teodora\\Source\\Repos\\teodoranae\\ProiectDAW\\DAWSlack\\DAWSlack.csproj",
+        "packagesPath": "C:\\Users\\Teodora\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Teodora\\source\\repos\\teodoranae\\ProiectDAW\\DAWSlack\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Stankovic\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Teodora\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

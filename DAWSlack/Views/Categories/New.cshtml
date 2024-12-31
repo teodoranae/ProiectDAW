@@ -1,5 +1,7 @@
-﻿@{
-    ViewBag.Title = "Adaugare Categorie";
+﻿@model DAWSlack.Models.Category
+
+@{
+    ViewBag.Title = "Adauga o noua categorie";
 }
 
 
@@ -8,13 +10,16 @@
 
 <form method="post" action="/Categories/New">
 
-    <label>Nume categorie</label>
+    <label asp-for="CategoryName" class="form-label">Denumirea categoriei</label>
     <br />
-    <input type="text" name="CategoryName" />
-    <br /><br />
-    <label>Descriere</label>
+    <input asp-for="CategoryName" class="form-control" />
+    <span asp-validation-for="CategoryName" class="text-danger"></span>
+    <br/>
+    <label asp-for="CategoryDescription" class="form-label">Descriere</label>
     <br />
-    <input type="text" name="CategoryDescription" />
+    <input asp-for="CategoryDescription" class="form-control" />
+    <span asp-validation-for="CategoryDescription" class="text-danger"></span>
+
     <br /><br />
     <button class="btn btn-success" type="submit">Adauga categorie</button>
 </form>

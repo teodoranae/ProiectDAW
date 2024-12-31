@@ -80,7 +80,7 @@ namespace DAWSlack.Controllers
             return selectList;
         }
 
-        [Authorize(Roles = "Editor,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public ActionResult New()
         {
             ChatChannel channel = new ChatChannel();
@@ -91,7 +91,7 @@ namespace DAWSlack.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "Editor,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult New(ChatChannel channel)
         {
             if (ModelState.IsValid)
@@ -99,10 +99,10 @@ namespace DAWSlack.Controllers
 
                 db.Channels.Add(channel);
                 db.SaveChanges();
-                TempData["message"] = "Articolul a fost adaugat";
+                TempData["message"] = "Canalul a fost creat";
                 TempData["messageType"] = "alert-success";
                 return RedirectToAction("Index");
-                //return View();
+                return View();
             }
             else
             {
@@ -126,7 +126,7 @@ namespace DAWSlack.Controllers
         //    }
         //}
 
-                [Authorize(Roles = "User,Editor,Admin")]
+                [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Index()
         {
             var channels = db.Channels.OrderByDescending(a => a.ChannelName);
@@ -227,7 +227,7 @@ namespace DAWSlack.Controllers
         // In plus sunt preluate si toate comentariile asociate unui articol
         // Se afiseaza si userul care a postat articolul respectiv
         // [HttpGet] se executa implicit implicit
-        [Authorize(Roles = "User,Editor,Admin")]
+        [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Show(int id)
         {
             ChatChannel channel = db.Channels.Include("Category").Include("User")
@@ -321,7 +321,7 @@ namespace DAWSlack.Controllers
         {
             ViewBag.AfisareButoane = false;
 
-            if (User.IsInRole("Editor"))
+            if (User.IsInRole("Moderator"))
             {
                 ViewBag.AfisareButoane = true;
             }
