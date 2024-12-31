@@ -256,6 +256,8 @@ namespace DAWSlack.Controllers
             //return View(channel);
             return PartialView("Channellnfo", channel);
         }
+
+
         [HttpPost]
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Show([FromForm] Message message)
@@ -273,7 +275,7 @@ namespace DAWSlack.Controllers
                         Console.WriteLine(error.ErrorMessage); // Log or debug this line
                     }
                 }
-            } 
+            }
 
             if (ModelState.IsValid)
             {

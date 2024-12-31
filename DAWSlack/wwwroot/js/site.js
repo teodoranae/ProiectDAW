@@ -37,6 +37,7 @@ $(document).ready(function () {
             type: 'GET',
             success: function (response) {
                 // Înlocuiește doar conținutul containerului
+                console.log(response);
                 $("#content-container").html(response);
             },
             error: function () {
@@ -45,3 +46,6 @@ $(document).ready(function () {
         });
     });
 });
+
+
+

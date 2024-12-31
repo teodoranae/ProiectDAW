@@ -337,3 +337,106 @@ a.nav-link:hover {
     min-height: calc(100vh - 60px);
 }
 
+
+
+
+/* General Body Styling */
+body {
+    background-color: #f5f6f8; /* Light background similar to Discord light theme */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2e3338; /* Dark text for readability */
+}
+
+/* Channel Information Card */
+#infoChannel {
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+    #infoChannel .card-title {
+        background-color: #7289da;
+    }
+/* Card Title */
+.card-title {
+    background-color: #f1f3f5; /* Light gray background */
+    color: #2e3338;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Channel Description */
+.card-text {
+    color: #6d7278; /* Lighter gray for the description text */
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Channel Details (Category and User) */
+.d-flex {
+    color: #6d7278; /* Lighter gray for the details */
+    font-size: 14px;
+}
+
+    .d-flex i {
+        margin-right: 5px;
+        color: #5865f2; /* Light blue for the icons */
+    }
+
+/* Alerts for Missing Information */
+.alert-success {
+    background-color: #43b581; /* Green for success alerts */
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 10px;
+}
+
+.alert-danger {
+    background-color: #f04747; /* Red for error alerts */
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Messages Container */
+#contentAfisare {
+    margin-top: 20px;
+}
+
+    /* Individual Message Styling */
+    #contentAfisare p {
+        background-color: #ffffff; /* White background for messages */
+        padding: 12px;
+        border-radius: 8px;
+        margin: 5px 0;
+        border: 1px solid #e4e6eb; /* Light border around messages */
+        word-wrap: break-word;
+        font-size: 15px;
+        color: #2e3338;
+    }
+
+    #contentAfisare hr {
+        border: 1px solid #e4e6eb;
+        margin-top: 10px;
+    }
+
+/* Styling for Message Input Box (if you plan to add this in future) */
+textarea {
+    background-color: #ffffff;
+    color: #2e3338;
+    border: 1px solid #e4e6eb;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+#writeMessage {
+    margin-bottom: 50px; /* Add space below the element */
+}
