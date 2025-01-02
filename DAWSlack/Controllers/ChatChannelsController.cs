@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 using System.Threading.Channels;
+
 
 namespace DAWSlack.Controllers
 {
@@ -227,6 +229,114 @@ namespace DAWSlack.Controllers
         // In plus sunt preluate si toate comentariile asociate unui articol
         // Se afiseaza si userul care a postat articolul respectiv
         // [HttpGet] se executa implicit implicit
+        //[Authorize(Roles = "User,Moderator,Admin")]
+        //public IActionResult Show(int id)
+        //{
+        //    ChatChannel channel = db.Channels.Include("Category").Include("User")
+        //                          .Where(ch => ch.Id == id)
+        //                          .FirstOrDefault();
+
+        //    var messages = from message in db.Messages
+        //                   where message.ChannelId == channel.Id
+        //                   orderby message.Date
+        //                   select message;
+        //    ViewBag.Messages = messages;
+
+
+        //    var messagesWithUsers = (from mess in db.Messages
+        //                             join user in db.Users on mess.UserId equals user.Id
+        //                             where mess.ChannelId == channel.Id
+        //                             select new
+        //                             {
+        //                                 mess.Content,
+        //                                 mess.UserId,
+        //                                 user.UserName
+        //                             }).ToList();
+
+        //    // Pass the combined data to ViewBag
+        //    ViewBag.MessagesWithUsers = messagesWithUsers;
+
+
+        //    SetAccessRights();
+
+        //    if (TempData.ContainsKey("message"))
+        //    {
+        //        ViewBag.Message = TempData["message"];
+        //    }
+
+        //    if (TempData.ContainsKey("messageType"))
+        //    {
+        //        ViewBag.Alert = TempData["messageType"];
+        //    }
+
+        //    //return View(channel);
+        //    return PartialView("Channellnfo", channel);
+        //}
+
+
+        //[HttpPost]
+        //[Authorize(Roles = "User,Editor,Admin")]
+        //public IActionResult Show([FromForm] Message message)
+        //{
+        //    message.Date = DateTime.Now;
+
+        //    // preluam Id-ul utilizatorului care posteaza comentariul
+        //    message.UserId = _userManager.GetUserId(User);
+        //    if (!ModelState.IsValid)
+        //    {
+        //        foreach (var modelState in ModelState.Values)
+        //        {
+        //            foreach (var error in modelState.Errors)
+        //            {
+        //                Console.WriteLine(error.ErrorMessage); // Log or debug this line
+        //            }
+        //        }
+        //    }
+
+        //    if (ModelState.IsValid)
+        //    {
+        //        message.Type = "1";
+        //        db.Messages.Add(message);
+        //        db.SaveChanges();
+
+        //        ChatChannel channel = db.Channels.Include("Category")
+        //                                 .Where(channel => channel.Id == message.ChannelId)
+        //                                 .First();
+
+
+        //        //
+        //        //return Redirect("/ChatChannels/Show/"+message.ChannelId.ToString());
+        //        var messages = from mess in db.Messages
+        //                       where mess.ChannelId == channel.Id
+        //                       orderby mess.Date
+        //                       select mess;
+        //        ViewBag.Messages = messages;
+        //        var channels = db.Channels.OrderByDescending(a => a.ChannelName);
+        //        ViewBag.Channels = channels;
+        //        //return PartialView("Channellnfo", channel);
+        //        return View("Index");
+        //    }
+        //    else
+        //    {
+        //        var channel = db.Channels.Find(message.ChannelId); // Ex
+
+        //        SetAccessRights();
+
+        //        var messages = from mess in db.Messages
+        //                       where mess.ChannelId == channel.Id
+        //                       orderby mess.Date
+        //                       select mess;
+        //        ViewBag.Messages = messages;
+
+
+        //        var channels = db.Channels.OrderByDescending(a => a.ChannelName);
+        //        ViewBag.Channels = channels;
+        //        ViewBag.NewID = channel.Id;
+        //        //return View("Index");
+        //        return View();
+        //    }
+        //}
+
         [Authorize(Roles = "User,Moderator,Admin")]
         public IActionResult Show(int id)
         {
@@ -234,12 +344,24 @@ namespace DAWSlack.Controllers
                                   .Where(ch => ch.Id == id)
                                   .FirstOrDefault();
 
-            var messages = from message in db.Messages
-                           where message.ChannelId == channel.Id
-                           orderby message.Date
-                           select message;
-            ViewBag.Messages = messages;
+            if (channel == null)
+            {
+                return NotFound();
+            }
 
+            var messagesWithUsers = (from mess in db.Messages
+                                     join user in db.Users on mess.UserId equals user.Id
+                                     where mess.ChannelId == channel.Id
+                                     orderby mess.Date
+                                     select new
+                                     {
+                                         mess.Content,
+                                         mess.UserId,
+                                         user.UserName,
+                                         mess.Date 
+                                     }).ToList();
+
+            ViewBag.MessagesWithUsers = messagesWithUsers;
 
             SetAccessRights();
 
@@ -253,70 +375,68 @@ namespace DAWSlack.Controllers
                 ViewBag.Alert = TempData["messageType"];
             }
 
-            //return View(channel);
+            // Return partial view for channel information
             return PartialView("Channellnfo", channel);
         }
-
 
         [HttpPost]
         [Authorize(Roles = "User,Editor,Admin")]
         public IActionResult Show([FromForm] Message message)
         {
+            message.Type = "1";
             message.Date = DateTime.Now;
 
-            // preluam Id-ul utilizatorului care posteaza comentariul
             message.UserId = _userManager.GetUserId(User);
+
+            message.Content = ConvertToEmbeddedMedia(message.Content);
+
             if (!ModelState.IsValid)
             {
                 foreach (var modelState in ModelState.Values)
                 {
                     foreach (var error in modelState.Errors)
                     {
-                        Console.WriteLine(error.ErrorMessage); // Log or debug this line
+                        Console.WriteLine(error.ErrorMessage);
                     }
                 }
+                return View("Error");
             }
 
-            if (ModelState.IsValid)
-            {
-                message.Type = "1";
-                db.Messages.Add(message);
-                db.SaveChanges();
+            db.Messages.Add(message);
+            db.SaveChanges();
 
-                ChatChannel channel = db.Channels.Include("Category")
-                                         .Where(channel => channel.Id == message.ChannelId)
-                                         .First();
+            ChatChannel channel = db.Channels.Include("Category")
+                                     .Where(channel => channel.Id == message.ChannelId)
+                                     .First();
 
 
-                //
-                //return Redirect("/ChatChannels/Show/"+message.ChannelId.ToString());
-                var messages = from mess in db.Messages
-                               where mess.ChannelId == channel.Id
-                               orderby mess.Date
-                               select mess;
-                ViewBag.Messages = messages;
-                var channels = db.Channels.OrderByDescending(a => a.ChannelName);
-                ViewBag.Channels = channels;
-                //return PartialView("Channellnfo", channel);
-                return View("Index");
-            }
-            else
-            {
-                var channel = db.Channels.Find(message.ChannelId); // Ex
-
-                SetAccessRights();
-
-                var messages = from mess in db.Messages
-                               where mess.ChannelId == channel.Id
-                               orderby mess.Date
-                               select mess;
-                ViewBag.Messages = messages;
-                var channels = db.Channels.OrderByDescending(a => a.ChannelName);
-                ViewBag.Channels = channels;
-                ViewBag.NewID = channel.Id;
-                return View("Index");
-            }
+            //
+            //return Redirect("/ChatChannels/Show/"+message.ChannelId.ToString());
+            var messages = from mess in db.Messages
+                           where mess.ChannelId == channel.Id
+                           orderby mess.Date
+                           select mess;
+            ViewBag.Messages = messages;
+            var channels = db.Channels.OrderByDescending(a => a.ChannelName);
+            ViewBag.Channels = channels;
+            //return PartialView("Channellnfo", channel);
+            return View("Index");
         }
+
+        public string ConvertToEmbeddedMedia(string? content)
+        {
+            content = Regex.Replace(content, @"https?://(?:www\.)?(?:youtube\.com/watch\?v=|youtu\.be/)([\w\-]+)",
+                "<iframe width='560' height='315' src='https://www.youtube.com/embed/$1' frameborder='0' allowfullscreen></iframe>", RegexOptions.IgnoreCase);
+
+            content = Regex.Replace(content, @"https?://(?:www\.)?vimeo\.com/(\d+)", 
+                "<iframe width='560' height='315' src='https://player.vimeo.com/video/$1' frameborder='0' allowfullscreen></iframe>", RegexOptions.IgnoreCase);
+
+            content = Regex.Replace(content, @"(https?://[^\s]+(\.(jpg|jpeg|png|gif|bmp|svg|webp)))", 
+                "<img src='$1' style='max-width: 100%; max-height: 300px;' />", RegexOptions.IgnoreCase);
+
+            return content;
+        }
+
 
 
         private void SetAccessRights()

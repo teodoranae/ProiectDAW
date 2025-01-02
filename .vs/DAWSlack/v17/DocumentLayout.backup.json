@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\Github\\ProiectDAW\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\controllers\\chatchannelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\controllers\\chatchannelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\views\\shared\\channellnfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\views\\shared\\channellnfo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\views\\chatchannels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\views\\chatchannels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\controllers\\chatchannelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\controllers\\chatchannelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\views\\chatchannels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\views\\chatchannels\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\views\\chatchannels\\new.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -137,10 +141,6 @@
       "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\models\\userchannel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|d:\\github\\proiectdaw\\dawslack\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{4532F42D-AD4B-4696-A765-E2D4E202D073}|DAWSlack\\DAWSlack.csproj|solutionrelative:dawslack\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -168,11 +168,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 1099,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\ChatChannels\\Index.cshtml",
+              "RelativeDocumentMoniker": "DAWSlack\\Views\\ChatChannels\\Index.cshtml",
+              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\ChatChannels\\Index.cshtml",
+              "RelativeToolTip": "DAWSlack\\Views\\ChatChannels\\Index.cshtml",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAjwA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T22:28:20.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatChannelsController.cs",
+              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\ChatChannelsController.cs",
+              "RelativeDocumentMoniker": "DAWSlack\\Controllers\\ChatChannelsController.cs",
+              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\ChatChannelsController.cs",
+              "RelativeToolTip": "DAWSlack\\Controllers\\ChatChannelsController.cs",
+              "ViewState": "AgIAABQBAAAAAAAAAAAqwCYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T22:35:39.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "DAWSlack\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "DAWSlack\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-09T03:34:46.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Channellnfo.cshtml",
+              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
+              "RelativeDocumentMoniker": "DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
+              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
+              "RelativeToolTip": "DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAADwvzUAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-24T21:04:26.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "DAWSlack\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "DAWSlack\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAOABAAAAAAAAAAAmwBACAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-09T03:21:21.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Message.cs",
+              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\Message.cs",
+              "RelativeDocumentMoniker": "DAWSlack\\Models\\Message.cs",
+              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\Message.cs",
+              "RelativeToolTip": "DAWSlack\\Models\\Message.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAA1wA4AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T07:02:51.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "New.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\ChatChannels\\New.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\ChatChannels\\New.cshtml",
@@ -185,82 +263,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\ChatChannels\\Index.cshtml",
-              "RelativeDocumentMoniker": "DAWSlack\\Views\\ChatChannels\\Index.cshtml",
-              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\ChatChannels\\Index.cshtml",
-              "RelativeToolTip": "DAWSlack\\Views\\ChatChannels\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T22:28:20.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChatChannelsController.cs",
-              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\ChatChannelsController.cs",
-              "RelativeDocumentMoniker": "DAWSlack\\Controllers\\ChatChannelsController.cs",
-              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\ChatChannelsController.cs",
-              "RelativeToolTip": "DAWSlack\\Controllers\\ChatChannelsController.cs",
-              "ViewState": "AgIAADcBAAAAAAAAAAAQwOoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T22:35:39.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "site.js",
-              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\js\\site.js",
-              "RelativeDocumentMoniker": "DAWSlack\\wwwroot\\js\\site.js",
-              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\js\\site.js",
-              "RelativeToolTip": "DAWSlack\\wwwroot\\js\\site.js",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAiwCcAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-12-09T03:34:46.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Channellnfo.cshtml",
-              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
-              "RelativeDocumentMoniker": "DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
-              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
-              "RelativeToolTip": "DAWSlack\\Views\\Shared\\Channellnfo.cshtml",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T21:04:26.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "site.css",
-              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "DAWSlack\\wwwroot\\css\\site.css",
-              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "DAWSlack\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAJgBAAAAAAAAAAAqwLMBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-09T03:21:21.794Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Messages [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SlackDatabase/True/SqlTable/dbo.Messages.sql",
-              "ToolTip": "dbo.Messages [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-12-31T10:09:16.082Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "dbo.Messages.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SlackDatabase/True/SqlTable/dbo.Messages.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SlackDatabase/True/SqlTable/dbo.Messages.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-12-31T10:09:16.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "HomeController.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Controllers\\HomeController.cs",
@@ -273,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Models\\ErrorViewModel.cs",
@@ -281,11 +293,12 @@
               "RelativeToolTip": "DAWSlack\\Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T22:21:21.281Z"
+              "WhenOpened": "2024-12-11T22:21:21.281Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -293,11 +306,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T20:57:25.26Z"
+              "WhenOpened": "2024-12-24T20:57:25.26Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "_Layout.cshtml.css",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\_Layout.cshtml.css",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Shared\\_Layout.cshtml.css",
@@ -305,11 +319,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Shared\\_Layout.cshtml.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-11T22:04:53.68Z"
+              "WhenOpened": "2024-12-11T22:04:53.68Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Users\\Index.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Users\\Index.cshtml",
@@ -317,11 +332,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Users\\Index.cshtml",
               "ViewState": "AgIAAAMAAAAAAAAAAAAkwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-24T21:03:05.063Z"
+              "WhenOpened": "2024-12-24T21:03:05.063Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Shared\\_Layout.cshtml",
@@ -329,11 +345,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABgAAAAAAAAAAAAowDIAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T03:25:01.636Z"
+              "WhenOpened": "2024-12-09T03:25:01.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "dbo.Channels.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SlackDatabase/True/SqlTable/dbo.Channels.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SlackDatabase/True/SqlTable/dbo.Channels.sql",
@@ -342,7 +359,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Program.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Program.cs",
@@ -350,11 +367,12 @@
               "RelativeToolTip": "DAWSlack\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T23:33:31.059Z"
+              "WhenOpened": "2024-12-09T23:33:31.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Categories\\Edit.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Categories\\Edit.cshtml",
@@ -362,11 +380,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Categories\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T10:12:10.906Z"
+              "WhenOpened": "2024-12-05T10:12:10.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ChannelRolesController.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\ChannelRolesController.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Controllers\\ChannelRolesController.cs",
@@ -374,11 +393,12 @@
               "RelativeToolTip": "DAWSlack\\Controllers\\ChannelRolesController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:23:58.968Z"
+              "WhenOpened": "2024-12-03T07:23:58.968Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Categories\\Index.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Categories\\Index.cshtml",
@@ -386,11 +406,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Categories\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-12T02:37:03.312Z"
+              "WhenOpened": "2024-12-12T02:37:03.312Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Controllers\\CategoriesController.cs",
@@ -398,23 +419,25 @@
               "RelativeToolTip": "DAWSlack\\Controllers\\CategoriesController.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAkwC0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:23:39.736Z"
+              "WhenOpened": "2024-12-03T07:23:39.736Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ChatChannel.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\ChatChannel.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Models\\ChatChannel.cs",
               "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\ChatChannel.cs",
               "RelativeToolTip": "DAWSlack\\Models\\ChatChannel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAUwA8AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAA0wA8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-11T22:24:21.181Z"
+              "WhenOpened": "2024-12-11T22:24:21.181Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "New.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Home\\New.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Home\\New.cshtml",
@@ -422,11 +445,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Home\\New.cshtml",
               "ViewState": "AgIAABkAAAAAAAAAAAAmwCcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T23:10:20.056Z"
+              "WhenOpened": "2024-12-09T23:10:20.056Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "New.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Categories\\New.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Categories\\New.cshtml",
@@ -434,23 +458,25 @@
               "RelativeToolTip": "DAWSlack\\Views\\Categories\\New.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T14:24:45.515Z"
+              "WhenOpened": "2024-12-10T14:24:45.515Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "MessagesController.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\MessagesController.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Controllers\\MessagesController.cs",
               "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Controllers\\MessagesController.cs",
               "RelativeToolTip": "DAWSlack\\Controllers\\MessagesController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA4wCUAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwCUAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:22:54.716Z"
+              "WhenOpened": "2024-12-03T07:22:54.716Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Shared\\_LoginPartial.cshtml",
@@ -458,11 +484,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Shared\\_LoginPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-11T22:27:53.704Z"
+              "WhenOpened": "2024-12-11T22:27:53.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Data\\ApplicationDbContext.cs",
@@ -470,11 +497,12 @@
               "RelativeToolTip": "DAWSlack\\Data\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:07:54.906Z"
+              "WhenOpened": "2024-12-04T13:07:54.906Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "SeedData.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\SeedData.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Models\\SeedData.cs",
@@ -482,11 +510,12 @@
               "RelativeToolTip": "DAWSlack\\Models\\SeedData.cs",
               "ViewState": "AgIAADoAAAAAAAAAAAAQwEwAAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T10:12:29.835Z"
+              "WhenOpened": "2024-12-05T10:12:29.835Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "ChannelRole.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\ChannelRole.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Models\\ChannelRole.cs",
@@ -494,23 +523,25 @@
               "RelativeToolTip": "DAWSlack\\Models\\ChannelRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:03:40.659Z"
+              "WhenOpened": "2024-12-03T07:03:40.659Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\Category.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Models\\Category.cs",
               "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\Category.cs",
               "RelativeToolTip": "DAWSlack\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:03:06.048Z"
+              "WhenOpened": "2024-12-03T07:03:06.048Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Models\\ApplicationUser.cs",
@@ -518,11 +549,12 @@
               "RelativeToolTip": "DAWSlack\\Models\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T06:02:44.629Z"
+              "WhenOpened": "2024-12-09T06:02:44.629Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Home\\Privacy.cshtml",
@@ -530,11 +562,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-10T14:10:35.609Z"
+              "WhenOpened": "2024-12-10T14:10:35.609Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\_ViewStart.cshtml",
@@ -542,11 +575,12 @@
               "RelativeToolTip": "DAWSlack\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T03:19:37.125Z"
+              "WhenOpened": "2024-12-09T03:19:37.125Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Show.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Categories\\Show.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Categories\\Show.cshtml",
@@ -554,23 +588,25 @@
               "RelativeToolTip": "DAWSlack\\Views\\Categories\\Show.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-05T10:12:23.893Z"
+              "WhenOpened": "2024-12-05T10:12:23.893Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "DAWSlack\\Views\\Home\\Index.cshtml",
               "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "DAWSlack\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAwAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwAwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T04:28:13.303Z"
+              "WhenOpened": "2024-12-09T04:28:13.303Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "UserChannel.cs",
               "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\UserChannel.cs",
               "RelativeDocumentMoniker": "DAWSlack\\Models\\UserChannel.cs",
@@ -578,19 +614,8 @@
               "RelativeToolTip": "DAWSlack\\Models\\UserChannel.cs",
               "ViewState": "AgIAAAEAAAAAAAAAAAAmwA8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T23:20:02.992Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "Message.cs",
-              "DocumentMoniker": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\Message.cs",
-              "RelativeDocumentMoniker": "DAWSlack\\Models\\Message.cs",
-              "ToolTip": "D:\\Github\\ProiectDAW\\DAWSlack\\Models\\Message.cs",
-              "RelativeToolTip": "DAWSlack\\Models\\Message.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA/wBIAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:02:51.378Z"
+              "WhenOpened": "2024-12-09T23:20:02.992Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -602,7 +627,8 @@
               "RelativeToolTip": "DAWSlack\\Views\\Shared\\Error.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-09T04:26:40.631Z"
+              "WhenOpened": "2024-12-09T04:26:40.631Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -637,7 +663,8 @@
               "RelativeToolTip": "DAWSlack\\Data\\Migrations\\20241204132238_migrate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:22:38.516Z"
+              "WhenOpened": "2024-12-04T13:22:38.516Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -649,7 +676,8 @@
               "RelativeToolTip": "DAWSlack\\Data\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T13:06:40.115Z"
+              "WhenOpened": "2024-12-04T13:06:40.115Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,5 +1,6 @@
 ﻿@model DAWSlack.Models.ChatChannel
 
+
 <div class="card-body" id="infoChannel">
     @if (Model != null)
     {
@@ -30,15 +31,43 @@
     }
 </div>
 
-
+@*
 <div class="container" id="contentAfisare">
 
     @foreach (var message in ViewBag.Messages)
     {
+        <p>@message.UserId</p>
         <p>@message.Content</p>
     }
 
 </div>
+
+*@
+<div class="container" id="contentAfisare">
+    @if (ViewBag.MessagesWithUsers != null)
+    {
+        <div id="messageBox">
+            @foreach (var message in ViewBag.MessagesWithUsers)
+            {
+                <div class="message">
+                    <div class="user-info">
+                        <span class="username">@message.UserName</span>
+                        <span class="userid">(@message.UserId)</span>
+                    </div>
+                    <div class="message-content">
+                        @Html.Raw(message.Content) <!-- Render HTML content with embedded media -->
+                    </div>
+                </div>
+            }
+        </div>
+
+    }
+    else
+    {
+        <p>No messages available.</p>
+    }
+</div>
+
 
 @* Afisarea formularului in care se poate adauga un comentariu *@
 
@@ -90,7 +119,7 @@
 }
 *@
 
-
+@*
 <div class="container" id="writeMessage">
     <div class="row">
 
@@ -128,4 +157,27 @@
 
     </div>
 </div>
+*@
 
+<div class="container" id="writeMessage">
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="card">
+                <form method="post" asp-controller="ChatChannels" asp-action="Show">
+                    <div class="card-body">
+                        <input type="hidden" name="ChannelId" value="@Model.Id" />
+
+                        <label>Continut Mesaj</label>
+                        <br />
+                        <textarea class="form-control" name="Content" placeholder="Paste your image/video URL here"></textarea>
+                        <br /><br />
+
+                        <button class="btn btn-success" type="submit">Adauga Mesaj</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
