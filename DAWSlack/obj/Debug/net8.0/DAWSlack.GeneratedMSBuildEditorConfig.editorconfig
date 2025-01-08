@@ -62,12 +62,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xTaG93LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Github/ProiectDAW/DAWSlack/Views/ChatChannels/EditChannel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdENoYW5uZWxzXEVkaXRDaGFubmVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Github/ProiectDAW/DAWSlack/Views/ChatChannels/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdENoYW5uZWxzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Github/ProiectDAW/DAWSlack/Views/ChatChannels/MyChannels.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdENoYW5uZWxzXE15Q2hhbm5lbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Github/ProiectDAW/DAWSlack/Views/ChatChannels/New.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdENoYW5uZWxzXE5ldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ProiectDAW/DAWSlack/Views/ChatChannels/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdENoYW5uZWxzXFNob3cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ProiectDAW/DAWSlack/Views/Home/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github/ProiectDAW/DAWSlack/Views/Home/Index.cshtml]
@@ -80,6 +96,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Github/ProiectDAW/DAWSlack/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ProiectDAW/DAWSlack/Views/Messages/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVzc2FnZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github/ProiectDAW/DAWSlack/Views/Shared/Channellnfo.cshtml]

@@ -354,6 +354,7 @@ body {
     padding: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
+    margin-left: 260px;
 }
 
     #infoChannel .card-title {
@@ -526,3 +527,131 @@ textarea {
         font-size: 14px;
     }
 }
+/*                                     */
+.discord-style {
+    display: flex;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+}
+
+.main-content {
+    display: flex;
+    flex: 1;
+}
+
+.content {
+    flex: 3;
+    padding: 20px;
+}
+
+.participants {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 15px;
+    border-left: 1px solid #ddd;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+
+    .participants h3 {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #333;
+    }
+
+    .participants .list-group {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .participants .list-group-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+    }
+
+        .participants .list-group-item .badge {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#infoChannel {
+    display: block; /* Afișează ca bloc */
+    width: 100%; /* Lățime completă */
+    max-width: 800px; /* Limitează lățimea maximă */
+    background-color: #ffffff; /* Fundal alb */
+    border-radius: 8px; /* Colțuri rotunjite */
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Umbră subtile */
+    margin: 20px auto; /* Centrează pe pagină */
+    text-align: left; /* Afișează textul aliniat la stânga */
+}
+
+    #infoChannel .card-title {
+        display: block; /* Menține bara pe întreaga lățime */
+        width: 100%;
+        background-color: #7289da; /* Fundal albastru */
+        color: #ffffff; /* Text alb */
+        padding: 10px 15px;
+        border-radius: 6px 6px 0 0; /* Colțuri rotunjite doar pentru partea de sus */
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    #infoChannel .card-text {
+        margin-top: 10px;
+        color: #6d7278; /* Text gri pentru descriere */
+        font-size: 14px;
+    }
+
+    #infoChannel .d-flex {
+        display: flex;
+        justify-content: space-between; /* Aliniază elementele în stânga și dreapta */
+        margin-top: 20px;
+        color: #6d7278;
+    }
+
+        #infoChannel .d-flex div {
+            font-size: 14px;
+        }
+
+        #infoChannel .d-flex i {
+            margin-right: 5px;
+            color: #5865f2; /* Albastru pentru iconițe */
+        }
+
+.message-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-sm {
+    font-size: 0.875rem;
+    padding: 5px 10px;
+}
+
+

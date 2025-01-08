@@ -1,5 +1,6 @@
 ﻿using DAWSlack.Data;
 using DAWSlack.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,54 +31,101 @@ namespace DAWSlack.Controllers
                 {
                     db.Messages.Add(mes);
                     db.SaveChanges();
-                    return Redirect("/Articles/Show/" + mes.ChannelId);
+                    return Redirect("/Messages/Show/" + mes.ChannelId);
                 }
 
                 catch (Exception)
                 {
-                    return Redirect("/Articles/Show/" + mes.ChannelId);
+                    return Redirect("/Messages/Show/" + mes.ChannelId);
                 }
 
             }
 
-            // Stergerea unui comentariu asociat unui articol din baza de date
+        //// Stergerea unui comentariu asociat unui articol din baza de date
+        //[HttpPost]
+        //public IActionResult Delete(int id)
+        //{
+        //    Message message = db.Messages.Find(id);
+        //    if (message == null)
+        //    {
+        //        TempData["message"] = "Message not found.";
+        //        TempData["messageType"] = "alert-danger";
+        //        return RedirectToAction("Show", "ChatChannels"); // Redirect back to the channel
+        //    }
+
+        //    db.Messages.Remove(message);
+        //    db.SaveChanges();
+
+        //    TempData["message"] = "Message deleted successfully.";
+        //    TempData["messageType"] = "alert-success";
+        //    return RedirectToAction("Show", "ChatChannels"); // Redirect back to the channel
+        //}
+
             [HttpPost]
             public IActionResult Delete(int id)
             {
-                Message mes = db.Messages.Find(id);
-                db.Messages.Remove(mes);
-                db.SaveChanges();
-                return Redirect("/Channels/Show/" + mes.ChannelId);
-            }
+                var message = db.Messages.FirstOrDefault(m => m.Id == id);
 
-
-            public IActionResult Edit(int id)
-            {
-                Message mes = db.Messages.Find(id);
-                ViewBag.Message = mes;
-                return View();
-            }
-
-            [HttpPost]
-            public IActionResult Edit(int id, Message requestComment)
-            {
-                Message mes = db.Messages.Find(id);
-                try
+                if (message == null)
                 {
+                    TempData["message"] = "Message not found.";
+                    TempData["messageType"] = "alert-danger";
+                    return RedirectToAction("Show", "ChatChannels");
+                }
 
-                    mes.Content = requestComment.Content;
+                db.Messages.Remove(message);
+                db.SaveChanges();
+
+                TempData["message"] = "Message deleted successfully.";
+                TempData["messageType"] = "alert-success";
+                return RedirectToAction("Show", "ChatChannels", new { id = message.ChannelId });
+            }
+
+        [Authorize(Roles = "User,Editor,Admin")]
+        public IActionResult Edit(int id)
+        {
+            Message comm = db.Messages.Find(id);
+
+            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            {
+                return View(comm);
+            }
+            else
+            {
+                TempData["message"] = "Nu aveti dreptul sa editati comentariul";
+                TempData["messageType"] = "alert-danger";
+                return RedirectToAction("Index", "Articles");
+            }
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "User,Editor,Admin")]
+        public IActionResult Edit(int id, Message requestComment)
+        {
+            Message comm = db.Messages.Find(id);
+
+            if (comm.UserId == _userManager.GetUserId(User) || User.IsInRole("Admin"))
+            {
+                if (ModelState.IsValid)
+                {
+                    comm.Content = requestComment.Content;
 
                     db.SaveChanges();
 
-                    return Redirect("/Channels/Show/" + mes.ChannelId);
+                    return Redirect("/ChatChannels/Show/" + comm.ChannelId);
                 }
-                catch (Exception e)
+                else
                 {
-                    return Redirect("/Channels/Show/" + mes.ChannelId);
+                    return View(requestComment);
                 }
-
-
+            }
+            else
+            {
+                TempData["message"] = "Nu aveti dreptul sa editati comentariul";
+                TempData["messageType"] = "alert-danger";
+                return RedirectToAction("Show", "ChatChannels", new { id = requestComment.ChannelId });
             }
         }
+    }
     }
 

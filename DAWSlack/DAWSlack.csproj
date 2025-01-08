@@ -30,7 +30,6 @@
 
   <ItemGroup>
     <Folder Include="Views\ChannelRoles\" />
-    <Folder Include="Views\Messages\" />
   </ItemGroup>
 
   <ItemGroup>

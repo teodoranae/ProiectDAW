@@ -1,0 +1,129 @@
+﻿@model DAWSlack.Models.ChatChannel
+
+@{
+    ViewBag.Title = "Editare Canal";
+}
+
+<h2>Editare Canal</h2>
+
+<form asp-action="EditChannel" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group">
+        <label asp-for="ChannelName"></label>
+        <input type="text" asp-for="ChannelName" class="form-control" />
+        <span asp-validation-for="ChannelName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ChannelDescription"></label>
+        <textarea asp-for="ChannelDescription" class="form-control"></textarea>
+        <span asp-validation-for="ChannelDescription" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvează modificările</button>
+    <a href="@Url.Action("Index", "ChatChannels")" class="btn btn-secondary">Renunță</a>
+</form>
+
+<h3>Participanți</h3>
+
+@if (ViewBag.Participants != null && ViewBag.Participants.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nume Utilizator</th>
+                <th>Rol</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var participant in ViewBag.Participants)
+            {
+                <tr>
+                    <td>@participant.UserName</td>
+                    <td>@participant.Role</td>
+                </tr>
+                <td>
+                    @if (participant.Role == "Member")
+                    {
+                        <!-- Button Add Roles -->
+                        <form asp-action="AddRole" method="post" style="display: inline-block;">
+                            <input type="hidden" name="ChannelId" value="@Model.Id" />
+                            <input type="hidden" name="UserId" value="@participant.UserId" />
+                            <button type="submit" class="btn btn-success">Add Moderator</button>
+                        </form>
+                    }
+                    else if (participant.Role == "Moderator")
+                    {
+                        <!-- Button Revoke Role -->
+                        <form asp-action="RevokeRole" method="post" style="display: inline-block;">
+                            <input type="hidden" name="ChannelId" value="@Model.Id" />
+                            <input type="hidden" name="UserId" value="@participant.UserId" />
+                                        <button type="submit" class="btn btn-success">Delete Moderator</button>
+                        </form>
+                    }
+                    else if (participant.Role == "Admin")
+                    {
+                        <!-- Admin role, no action allowed -->
+                        <span class="badge bg-primary">Admin</span>
+                    }
+                </td>
+                <td>
+                    <!-- Remove Participant Button -->
+                    @if (participant.UserId != ViewBag.UserCurent && participant.Role == "Member")
+                    {
+                        <form asp-action="RemoveParticipant" method="post" style="display: inline-block;">
+                            <input type="hidden" name="ChannelId" value="@Model.Id" />
+                            <input type="hidden" name="UserId" value="@participant.UserId" />
+                            <button type="submit" class="btn btn-danger">Remove</button>
+                        </form>
+                    }
+                </td>
+
+            }
+
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nu există participanți pentru acest canal.</p>
+}
+<h3>Cererile de Aderare</h3>
+@if (ViewBag.JoinRequests != null && ViewBag.JoinRequests.Count > 0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nume Utilizator</th>
+                <th>Acțiuni</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var request in ViewBag.JoinRequests)
+            {
+                <tr>
+                    <td>@request.UserName</td>
+                    <td>
+                        <!-- Accept Button -->
+                        <form asp-action="AcceptJoinRequest" method="post" style="display: inline-block;">
+                            <input type="hidden" name="RequestId" value="@request.RequestId" />
+                            <button type="submit" class="btn btn-success">Acceptă</button>
+                        </form>
+
+                        <!-- Reject Button -->
+                        <form asp-action="RejectJoinRequest" method="post" style="display: inline-block;">
+                            <input type="hidden" name="RequestId" value="@request.RequestId" />
+                            <button type="submit" class="btn btn-danger">Respinge</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+else
+{
+    <p>Nu există cereri de aderare pentru acest canal.</p>
+}
