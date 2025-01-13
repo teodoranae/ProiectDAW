@@ -8,6 +8,9 @@ namespace DAWSlack.Models
         public int Id { get; set; }
 
         public string ?Type { get; set; }
+
+        [Required(ErrorMessage = "Content is required.")]
+        [StringLength(500, ErrorMessage = "Content cannot exceed 500 characters.")]
         public string Content { get; set; }
 
         public DateTime Date { get; set; }

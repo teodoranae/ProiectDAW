@@ -23,6 +23,8 @@ namespace DAWSlack.Models
         public virtual ICollection<ChannelRole>? ChannelRoles { get; set; }
         public virtual ICollection<UserChannel>? UserChannels { get; set; }
         public virtual ICollection<Message>? Messages { get; set; }
+        public virtual ICollection<ApplicationUser>? Users { get; set; }
+        public virtual ICollection<ApplicationUser>? Mods { get; set; }
 
         [NotMapped]
         public IEnumerable<SelectListItem>? Categ { get; set; }

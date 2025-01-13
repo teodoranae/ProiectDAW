@@ -2,23 +2,28 @@
     ViewBag.Title = "Lista categorii";
 }
 
-<h2>@ViewBag.Title</h2>
-<br />
+<div class="category-page-container">
+ 
+    <div class="category-header">
+        <h2>@ViewBag.Title</h2>
+    </div>
 
-<a href="/ChatChannels/Index">Inapoi</a>
-<br />
-<br />
+    <div class="category-content">
+        <a href="/ChatChannels/Index" class="btn btn-secondary mb-3">Inapoi</a>
 
-@foreach (var category in ViewBag.Categories)
-{
-    <p>@category.CategoryName</p>
-    <a class="btn alert-success" href="/Categories/Show/@category.Id">Afisare categorie</a>
-    <a class="btn alert-success" href="/Categories/Edit/@category.Id">Editare categorie</a>
-    <br />
-    <hr />
-    <br />
-}
-<br />
-<a class="btn btn-success" href="/Categories/New">Adauga o noua categorie</a>
-<br />
+        @foreach (var category in ViewBag.Categories)
+        {
+            <div class="category-item">
+                <p class="category-name">@category.CategoryName</p>
+                <div class="category-actions">
+                    <a class="btn btn-info" href="/Categories/Show/@category.Id">Afisare categorie</a>
+                    <a class="btn btn-warning" href="/Categories/Edit/@category.Id">Editare categorie</a>
+                </div>
+                <hr />
+            </div>
+        }
 
+        <div class="category-add-new mt-4">
+            <a class="btn btn-success" href="/Categories/New">Adauga o noua categorie</a>
+        </div>
+    </div>

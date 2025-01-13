@@ -30,6 +30,12 @@ namespace DAWSlack.Data.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ChatChannelId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ChatChannelId1")
+                        .HasColumnType("int");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -75,6 +81,10 @@ namespace DAWSlack.Data.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ChatChannelId");
+
+                    b.HasIndex("ChatChannelId1");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -167,6 +177,26 @@ namespace DAWSlack.Data.Migrations
                     b.ToTable("Channels");
                 });
 
+            modelBuilder.Entity("DAWSlack.Models.JoinRequest", b =>
+                {
+                    b.Property<int>("RequestId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RequestId"));
+
+                    b.Property<int>("ChannelId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RequestId");
+
+                    b.ToTable("JoinRequests");
+                });
+
             modelBuilder.Entity("DAWSlack.Models.Message", b =>
                 {
                     b.Property<int>("Id")
@@ -186,7 +216,6 @@ namespace DAWSlack.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Type")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
@@ -211,6 +240,10 @@ namespace DAWSlack.Data.Migrations
 
                     b.Property<int>("ChannelId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Roles")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -362,6 +395,17 @@ namespace DAWSlack.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("DAWSlack.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("DAWSlack.Models.ChatChannel", null)
+                        .WithMany("Mods")
+                        .HasForeignKey("ChatChannelId");
+
+                    b.HasOne("DAWSlack.Models.ChatChannel", null)
+                        .WithMany("Users")
+                        .HasForeignKey("ChatChannelId1");
+                });
+
             modelBuilder.Entity("DAWSlack.Models.ChannelRole", b =>
                 {
                     b.HasOne("DAWSlack.Models.ChatChannel", "Channel")
@@ -391,7 +435,7 @@ namespace DAWSlack.Data.Migrations
             modelBuilder.Entity("DAWSlack.Models.Message", b =>
                 {
                     b.HasOne("DAWSlack.Models.ChatChannel", "Channel")
-                        .WithMany()
+                        .WithMany("Messages")
                         .HasForeignKey("ChannelId");
 
                     b.HasOne("DAWSlack.Models.ApplicationUser", "User")
@@ -489,7 +533,13 @@ namespace DAWSlack.Data.Migrations
                 {
                     b.Navigation("ChannelRoles");
 
+                    b.Navigation("Messages");
+
+                    b.Navigation("Mods");
+
                     b.Navigation("UserChannels");
+
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

@@ -23,29 +23,39 @@ window.addEventListener('load', () => {
     });
 });
 
-// === Adăugarea funcționalității AJAX pentru canale ===
 $(document).ready(function () {
-    // Event delegation pentru .channel-item
     $(document).on("click", ".channel-item", function () {
         var channelId = $(this).data("id");
-        //if (channelId == null) {
-        //    channelId = @Viewbag.channelId
-        //}
         console.log(channelId);
-        $.ajax({
-            url: '/ChatChannels/Show/' + channelId,
-            type: 'GET',
-            success: function (response) {
-                // Înlocuiește doar conținutul containerului
-                console.log(response);
-                $("#content-container").html(response);
-            },
-            error: function () {
-                $("#content-container").html("<h3>Eroare</h3><p>Nu s-a putut încărca conținutul canalului.</p>");
-            }
-        });
+        // Redirecționează către URL-ul complet
+        window.location.href = '/ChatChannels/Show/' + channelId;
     });
 });
+
+
+
+//$(document).ready(function () {
+//    // Event delegation pentru .channel-item
+//    $(document).on("click", ".channel-item", function () {
+//        var channelId = $(this).data("id");
+//        //if (channelId == null) {
+//        //    channelId = @Viewbag.channelId
+//        //}
+//        console.log(channelId);
+//        $.ajax({
+//            url: '/ChatChannels/Show/' + channelId,
+//            type: 'GET',
+//            success: function (response) {
+//                // Înlocuiește doar conținutul containerului
+//                console.log(response);
+//                $("#content-container").html(response);
+//            },
+//            error: function () {
+//                $("#content-container").html("<h3>Eroare</h3><p>Nu s-a putut încărca conținutul canalului.</p>");
+//            }
+//        });
+//    });
+//});
 
 
 

@@ -16,5 +16,7 @@ namespace DAWSlack.Data
         public DbSet<ChannelRole> ChannelRoles { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<UserChannel> UserChannels { get; set; }
+
+        public DbSet<JoinRequest> JoinRequests { get; set; }
     }
 }

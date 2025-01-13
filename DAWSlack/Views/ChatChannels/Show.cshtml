@@ -1,0 +1,202 @@
+﻿@if (TempData["message"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["message"]
+    </div>
+}
+<div class="discord-style">
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h3>@ViewBag.Title</h3>
+        <div class="search-bar">
+            <form method="GET">
+                <input type="text" placeholder="Search topics or keywords" name="search" value="@ViewBag.SearchString">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        @foreach (var channel in ViewBag.Channels)
+        {
+            <div class="channel-item" data-id="@channel.Id">
+                <a href="javascript:void(0);">@channel.ChannelName</a>
+            </div>
+        }
+
+        <div class="pagination-nav">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="@ViewBag.PaginationBaseUrl=1" aria-label="Previous">
+                        &laquo;
+                    </a>
+                </li>
+                @for (int i = 1; i <= ViewBag.lastPage; i++)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="@ViewBag.PaginationBaseUrl=@i">@i</a>
+                    </li>
+                }
+                <li class="page-item">
+                    <a class="page-link" href="@ViewBag.PaginationBaseUrl=@ViewBag.lastPage" aria-label="Next">
+                        &raquo;
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <a class="btn btn-success" asp-area="" asp-controller="ChatChannels" asp-action="New">Add Channel</a>
+    </div>
+    
+    <!-- Content and Participants -->
+    <div class="main-content">
+        <!-- Content Section -->
+        <div class="content">
+            <div class="card-body" id="infoChannel">
+                @if (Model != null)
+                {
+                    <h3 class="card-title alert-success py-3 px-3 rounded-2">
+                        @(Model.ChannelName)
+                    </h3>
+
+                    <div class="card-text">
+                        @Html.Raw(Model.ChannelDescription ?? "No Description Available")
+                    </div>
+
+                    <div class="d-flex justify-content-between flex-row mt-5">
+                        <div>
+                            <i class="bi bi-globe"></i>
+                            @(Model.Category?.CategoryName ?? "No Category")
+                        </div>
+                        <div>
+                            <i class="bi bi-person"></i>
+                            @(Model.User?.UserName ?? "No User")
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-danger">
+                        Channel information is missing.
+                    </div>
+                }
+            </div>
+
+            @if (ViewBag.isParticipant == true)
+            {
+                <div id="contentAfisare">
+                    @if (ViewBag.MessagesWithUsers != null)
+                    {
+                        @*<div id="messageBox">
+                            @foreach (var message in ViewBag.MessagesWithUsers)
+                            {
+                                <div class="message">
+                                    <div class="user-info">
+                                        <span class="username">@message.UserName</span>
+                                        <span class="userid">(@message.UserId)</span>
+                                    </div>
+                                    <div class="message-content">
+                                        @Html.Raw(message.Content)
+                                    </div>
+                                </div>
+                            }
+                        </div>*@
+
+
+                        <div id="messageBox">
+                            @foreach (var message in ViewBag.MessagesWithUsers)
+                            {
+                                <div class="message">
+                                    <!-- User and Message Info -->
+                                    <div class="user-info">
+                                        <span class="username">@message.UserName </span>
+                                        @* <span class="userid">(@message.UserId)</span>*@
+                                        <span class="message-date">@message.Date.ToString("g")</span> <!-- Date format -->
+                                    </div>
+                                    <div class="message-content">
+                                        @Html.Raw(message.Content)
+                                    </div>
+
+                                    <!-- Action Buttons -->
+                                    <div class="message-actions">
+                                        @if (ViewBag.UserCurent == message.UserId)
+                                        {
+                                            <!-- Edit Message -->
+                                            <form asp-controller="Messages" asp-action="Edit" method="get" style="display:inline-block;">
+                                                <input type="hidden" name="id" value="@message.MessageId" />
+                                                <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                                            </form>
+
+                                            <!-- Delete Message -->
+                                            <form asp-controller="Messages" asp-action="Delete" method="post" style="display:inline-block;">
+                                                <input type="hidden" name="id" value="@message.MessageId" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        }
+
+                                        @if (ViewBag.EsteAdmin || ViewBag.EsteModerator)
+                                        {
+                                            <!-- Delete Message for Admin/Moderator -->
+                                            <form asp-controller="Messages" asp-action="Delete" method="post" style="display:inline-block;">
+                                                <input type="hidden" name="id" value="@message.MessageId" />
+                                                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                                            </form>
+                                        }
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                    }
+                    else
+                    {
+                        <p>No messages available.</p>
+                    }
+                </div>
+
+                <div class="container" id="writeMessage">
+                    <div class="card">
+                        <form method="post" asp-controller="ChatChannels" asp-action="Show">
+                            <div class="card-body">
+                                <input type="hidden" name="ChannelId" value="@Model.Id" />
+                                <label>Message Content</label>
+                                <textarea class="form-control" name="Content" placeholder="Paste your image/video URL here"></textarea>
+                                <br />
+                                <button class="btn btn-success" type="submit">Add Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    You are not a participant in this channel.
+                </div>
+                <form asp-action="CreateRequest" method="post">
+                    <input type="hidden" name="ChannelId" value="@Model.Id" />
+                    <button type="submit" class="btn btn-primary">Request to Join</button>
+                </form>
+            }
+        </div>
+
+        <!-- Participants Section -->
+        <div class="participants">
+            <h3>Participants</h3>
+            @if (ViewBag.Participants != null && ViewBag.Participants.Count > 0)
+            {
+                <ul class="list-group">
+                    @foreach (var participant in ViewBag.Participants)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <span>@participant.UserName</span>
+                            <span class="badge bg-primary">@participant.Role</span>
+                        </li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No participants available.</p>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Canalele mele";
+    var myChannels = ViewBag.MyChannels as List<DAWSlack.Models.ChatChannel>; // Asigură-te că namespace-ul este corect
+}
+
+<h2>Canalele mele</h2>
+
+@if (myChannels != null && myChannels.Count > 0)
+{
+    <ul>
+        @foreach (var channel in myChannels)
+        {
+            <li style="margin-bottom: 15px;">
+                <h4>@channel.ChannelName</h4>
+                <p>@channel.ChannelDescription</p>
+                <div>
+                    <!-- Button Edit -->
+                    <a href="@Url.Action("EditChannel", "ChatChannels", new { id = channel.Id })" class="btn btn-warning">
+                        Edit
+                    </a>
+
+                    <!-- Button Delete -->
+                    <form asp-action="DeleteChannel" method="post" style="display: inline-block;"
+                          onsubmit="return confirm('Sigur doriți să ștergeți acest canal?');">
+                        <input type="hidden" name="id" value="@channel.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>Nu aveți canale la care sunteți "Creator" sau "Moderator".</p>
+}
