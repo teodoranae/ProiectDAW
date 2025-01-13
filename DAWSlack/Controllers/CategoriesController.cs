@@ -68,23 +68,34 @@ namespace DAWSlack.Controllers
         [HttpPost]
         public ActionResult Edit(int id, Category requestCategory)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(requestCategory); 
+            }
+
             try
             {
                 Category category = db.Categories.Find(id);
-
+                if (category == null)
                 {
-                    category.CategoryName = requestCategory.CategoryName;
-                    db.SaveChanges();
+                    return NotFound(); 
                 }
+                category.CategoryName = requestCategory.CategoryName;
+                category.CategoryDescription = requestCategory.CategoryDescription;
 
+                db.SaveChanges();
+
+                TempData["message"] = "Categoria a fost modificată cu succes.";
                 return RedirectToAction("Index");
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                ViewBag.Category = requestCategory;
-                return View();
+                TempData["error"] = "A apărut o eroare. Te rugăm să încerci din nou.";
+                return View(requestCategory);
             }
         }
+
+
 
         [HttpPost]
         public ActionResult Delete(int id)

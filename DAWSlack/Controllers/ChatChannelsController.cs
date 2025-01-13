@@ -747,7 +747,13 @@ namespace DAWSlack.Controllers
             message.Date = DateTime.Now;
 
             message.UserId = _userManager.GetUserId(User);
-
+            if (message.Content == null || message.Content.Length > 500)
+            {
+                TempData["message"] = "Content is too large or empty.";
+                TempData["messageType"] = "alert-danger";
+                return RedirectToAction("Show", new { id = message.ChannelId });
+            }
+           
             message.Content = ConvertToEmbeddedMedia(message.Content);
 
             if (!ModelState.IsValid)

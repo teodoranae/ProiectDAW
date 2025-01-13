@@ -598,24 +598,24 @@ textarea {
 }
 
 #infoChannel {
-    display: block; /* Afișează ca bloc */
-    width: 100%; /* Lățime completă */
-    max-width: 800px; /* Limitează lățimea maximă */
-    background-color: #ffffff; /* Fundal alb */
-    border-radius: 8px; /* Colțuri rotunjite */
+    display: block;
+    width: 100%; 
+    max-width: 800px; 
+    background-color: #ffffff; 
+    border-radius: 8px; 
     padding: 20px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Umbră subtile */
-    margin: 20px auto; /* Centrează pe pagină */
-    text-align: left; /* Afișează textul aliniat la stânga */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+    margin: 20px auto;
+    text-align: left; 
 }
 
     #infoChannel .card-title {
-        display: block; /* Menține bara pe întreaga lățime */
+        display: block; 
         width: 100%;
-        background-color: #7289da; /* Fundal albastru */
-        color: #ffffff; /* Text alb */
+        background-color: #7289da; 
+        color: #ffffff; 
         padding: 10px 15px;
-        border-radius: 6px 6px 0 0; /* Colțuri rotunjite doar pentru partea de sus */
+        border-radius: 6px 6px 0 0; 
         text-align: center;
         font-size: 18px;
         font-weight: bold;
@@ -623,13 +623,13 @@ textarea {
 
     #infoChannel .card-text {
         margin-top: 10px;
-        color: #6d7278; /* Text gri pentru descriere */
+        color: #6d7278; 
         font-size: 14px;
     }
 
     #infoChannel .d-flex {
         display: flex;
-        justify-content: space-between; /* Aliniază elementele în stânga și dreapta */
+        justify-content: space-between; 
         margin-top: 20px;
         color: #6d7278;
     }
@@ -640,8 +640,9 @@ textarea {
 
         #infoChannel .d-flex i {
             margin-right: 5px;
-            color: #5865f2; /* Albastru pentru iconițe */
+            color: #5865f2; 
         }
+
 
 .message-actions {
     margin-top: 10px;
@@ -655,3 +656,32 @@ textarea {
 }
 
 
+.category-page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+.category-header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.category-content {
+    flex: 1; 
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.category-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

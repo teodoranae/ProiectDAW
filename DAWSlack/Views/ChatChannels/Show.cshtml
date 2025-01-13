@@ -1,4 +1,10 @@
-﻿<div class="discord-style">
+﻿@if (TempData["message"] != null)
+{
+    <div class="alert alert-danger">
+        @TempData["message"]
+    </div>
+}
+<div class="discord-style">
     <!-- Sidebar -->
     <div class="sidebar">
         <h3>@ViewBag.Title</h3>
@@ -39,7 +45,7 @@
 
         <a class="btn btn-success" asp-area="" asp-controller="ChatChannels" asp-action="New">Add Channel</a>
     </div>
-
+    
     <!-- Content and Participants -->
     <div class="main-content">
         <!-- Content Section -->
@@ -94,14 +100,15 @@
                             }
                         </div>*@
 
+
                         <div id="messageBox">
                             @foreach (var message in ViewBag.MessagesWithUsers)
                             {
                                 <div class="message">
                                     <!-- User and Message Info -->
                                     <div class="user-info">
-                                        <span class="username">@message.UserName ?? "Unknown User"</span>
-                                        <span class="userid">(@message.UserId)</span>
+                                        <span class="username">@message.UserName </span>
+                                        @* <span class="userid">(@message.UserId)</span>*@
                                         <span class="message-date">@message.Date.ToString("g")</span> <!-- Date format -->
                                     </div>
                                     <div class="message-content">

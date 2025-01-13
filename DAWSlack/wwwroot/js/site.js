@@ -33,7 +33,7 @@ $(document).ready(function () {
 });
 
 
-//// === Adăugarea funcționalității AJAX pentru canale ===
+
 //$(document).ready(function () {
 //    // Event delegation pentru .channel-item
 //    $(document).on("click", ".channel-item", function () {
